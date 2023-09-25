@@ -1,62 +1,3 @@
-// WEEK 3
-
-/*
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  oslo: {
-    temp: -5,
-    humidity: 20,
-  },
-};
-
-// round temp
-for (let city in weather) {
-  weather[city].temp = Math.round(weather[city].temp);
-}
-
-let citySearch = prompt("Enter a city");
-citySearch = citySearch.toLowerCase().trim();
-
-if (weather.hasOwnProperty(citySearch)) {
-  let cityWeather = weather[citySearch];
-  // робимо назву міста з великої літери
-  function titleCaseCity(citySearch) {
-    return citySearch[0].toUpperCase() + citySearch.slice(1).toLowerCase();
-  }
-
-  let temp = cityWeather.temp;
-  let humidity = cityWeather.humidity;
-
-  alert(
-    `It is currently ${temp}°C in ${titleCaseCity(
-      citySearch
-    )} with a humidity of  ${humidity}% `
-  );
-} else {
-  alert(
-    `Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${citySearch}`
-  );
-}
-
-*/
-
-// WEEK 4
-
 // #region виставляємо дату
 let now = new Date();
 let p = document.querySelector("p.data-p");
@@ -93,26 +34,7 @@ if (date < 10) {
 p.innerHTML = `${day} ${hours} : ${minutes} |  ${date}/${month}/${year}`;
 
 // #endregion
-/*
-// #region змінюємо цельсії і фарінгейти
 
-function tempFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitDegree = document.querySelector("#temperature");
-
-  fahrenheitDegree = Math.round((temperature * 9) / 5 + 32);
-  temperature.innerHTML = `${fahrenheitDegree}`;
-}
-function tempCelsius() {
-  temperature.innerHTML = `32`;
-}
-let fahrenheit = document.querySelector("#fahrenheit-link");
-fahrenheit.addEventListener("click", tempFahrenheit);
-
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", tempCelsius);
-// #endregion
-*/
 // #region підключаємо поточне місце і показники погоди
 function showWeather(response) {
   let temp = document.querySelector("#temperature");
@@ -196,7 +118,7 @@ form.addEventListener("submit", search);
 
 function showPosition(position) {
   alert(
-    `Your geolocation ${position.coords.latitude}, ${position.coords.longitude}`
+    `Your geolocation is ${position.coords.latitude}, ${position.coords.longitude}`
   );
 }
 

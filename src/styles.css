@@ -186,3 +186,20 @@ span {
 .col i {
   padding-bottom: 15px;
 }
+
+.open-source {
+  padding-left: 30px;
+  margin-bottom: 0px;
+}
+
+.open-source p {
+  color: #04c3ff;
+  font-size: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.open-source a {
+  text-decoration: none;
+  color: #1e80ff;
+  font-family: "Oswald", sans-serif;
+}
